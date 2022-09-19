@@ -3869,7 +3869,7 @@ class mainCog(commands.Cog):
 
 class IlsangDistributionBot(commands.AutoShardedBot):
 	def __init__(self):
-		super().__init__(command_prefix=[""], help_command=None)	
+		super().__init__(command_prefix=[""], intents=descord.Intents.all(), help_command=None)	
 	
 	def run(self):
 		super().run(access_token, reconnect=True)
