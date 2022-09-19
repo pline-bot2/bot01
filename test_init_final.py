@@ -4246,8 +4246,3 @@ class soon(commands.AutoShardedBot):
 	async def close(self):
 		await super().close()
 		print("봇 종료 완료.")
-
-soon_bot : soon = soon()
-soon_bot.add_cog(mainCog(soon_bot))
-soon_bot.add_cog(taskCog(soon_bot))
-soon_bot.run()
