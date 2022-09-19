@@ -3867,7 +3867,7 @@ class mainCog(commands.Cog):
 		resultTJ = random.randrange(1,9)
 		return await PlaySound(ctx.voice_client, './sound/TJ' + str(resultTJ) +'.mp3')
 
-class IlsangDistributionBot(commands.AutoShardedBot):
+class soon(commands.AutoShardedBot):
 	def __init__(self):
 		super().__init__(command_prefix=[""], help_command=None)
 
@@ -4279,7 +4279,7 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 		await super().close()
 		print("봇 종료 완료.")
 
-ilsang_distribution_bot : IlsangDistributionBot = IlsangDistributionBot()
-ilsang_distribution_bot.add_cog(mainCog(ilsang_distribution_bot))
-ilsang_distribution_bot.add_cog(taskCog(ilsang_distribution_bot))
-ilsang_distribution_bot.run()
+soon_bot : soon = soon()
+soon_bot.add_cog(mainCog(soon_bot))
+soon_bot.add_cog(taskCog(soon_bot))
+soon_bot.run()
