@@ -3864,6 +3864,7 @@ class mainCog(commands.Cog):
 
 class soon(commands.AutoShardedBot):
 	def __init__(self) : super().__init__(command_prefix=[""], help_command=None)
+	   form.instance.created_by = self.request.user
 	def run(self) : super().run(access_token, reconnect=True)
 
 	async def on_ready(self):
