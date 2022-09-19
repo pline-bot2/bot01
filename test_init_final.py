@@ -20,11 +20,6 @@ from math import ceil, floor
 log_stream = StringIO()    
 logging.basicConfig(stream=log_stream, level=logging.WARNING)
 
-#ilsanglog = logging.getLogger('discord')
-#ilsanglog.setLevel(level = logging.WARNING)
-#handler = logging.StreamHandler()
-#handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-#ilsanglog.addHandler(handler)
 #####################################################
 
 if not discord.opus.is_loaded():
@@ -3868,11 +3863,8 @@ class mainCog(commands.Cog):
 		return await PlaySound(ctx.voice_client, './sound/TJ' + str(resultTJ) +'.mp3')
 
 class soon(commands.AutoShardedBot):
-	def __init__(self):
-		super().__init__(command_prefix=[""], help_command=None)
-
-	def run(self):
-		super().run(access_token, reconnect=True)
+	def __init__(self) : super().__init__(command_prefix=[""], help_command=None)
+	def run(self) : super().run(access_token, reconnect=True)
 
 	async def on_ready(self):
 		global basicSetting
