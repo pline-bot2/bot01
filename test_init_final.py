@@ -874,7 +874,7 @@ class taskCog(commands.Cog):
 		self.bot = bot
 		self.checker = True
 
-		self.main_task.start()
+		await self.main_task.start()
 
 	@tasks.loop(seconds=1.0, count=1)
 	async def main_task(self):
