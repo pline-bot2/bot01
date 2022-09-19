@@ -3841,35 +3841,9 @@ class mainCog(commands.Cog):
 					
 		return await ctx.send(f"```[{', '.join(list(result_boss_name))}] 보스 [추가등록]이 완료되었습니다.```", tts=False)
 
-	################ ?????????????? ################ 
-	@commands.command(name='!오빠')
-	async def brother1_(self, ctx):
-		if basicSetting[21] != "1":
-			return await ctx.send('```보이스를 사용하지 않도록 설정되어 있습니다.```', tts=False)
-		return await PlaySound(ctx.voice_client, './sound/오빠.mp3')
-
-	@commands.command(name='!언니')
-	async def sister_(self, ctx):
-		if basicSetting[21] != "1":
-			return await ctx.send('```보이스를 사용하지 않도록 설정되어 있습니다.```', tts=False)
-		return await PlaySound(ctx.voice_client, './sound/언니.mp3')
-
-	@commands.command(name='!형')
-	async def brother2_(self, ctx):
-		if basicSetting[21] != "1":
-			return await ctx.send('```보이스를 사용하지 않도록 설정되어 있습니다.```', tts=False)
-		return await PlaySound(ctx.voice_client, './sound/형.mp3')
-	
-	@commands.command(name='!TJ', aliases=['!tj'])
-	async def TJ_(self, ctx):
-		if basicSetting[21] != "1":
-			return await ctx.send('```보이스를 사용하지 않도록 설정되어 있습니다.```', tts=False)
-		resultTJ = random.randrange(1,9)
-		return await PlaySound(ctx.voice_client, './sound/TJ' + str(resultTJ) +'.mp3')
-
 class IlsangDistributionBot(commands.AutoShardedBot):
 	def __init__(self):
-		super().__init__(command_prefix=[""], intents=descord.Intents.all(), help_command=None)	
+		super().__init__(command_prefix=[""], intents = descord.Intents.all(), help_command=None)	
 	
 	def run(self):
 		super().run(access_token, reconnect=True)
