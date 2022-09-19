@@ -878,7 +878,7 @@ class taskCog(commands.Cog):
 
 	@tasks.loop(seconds=1.0, count=1)
 	async def main_task(self):
-		boss_task = asyncio.get_event_loop().create_task(self.boss_check())
+		await boss_task = asyncio.get_event_loop().create_task(self.boss_check())
 		await boss_task
 
 	@main_task.before_loop
