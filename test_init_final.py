@@ -4253,6 +4253,4 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 		print("봇 종료 완료.")
 
 ilsang_distribution_bot : IlsangDistributionBot = IlsangDistributionBot()
-ilsang_distribution_bot.add_cog(mainCog(ilsang_distribution_bot))
-ilsang_distribution_bot.add_cog(taskCog(ilsang_distribution_bot))
 ilsang_distribution_bot.run()
