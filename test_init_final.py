@@ -870,10 +870,9 @@ async def get_guild_channel_info(bot):
 	return text_channel_name, text_channel_id, voice_channel_name, voice_channel_id
 
 class taskCog(commands.Cog): 
-	def __init__(self, bot):
+	async def __init__(self, bot):
 		self.bot = bot
 		self.checker = True
-
 		await self.main_task.start()
 
 	@tasks.loop(seconds=1.0, count=1)
